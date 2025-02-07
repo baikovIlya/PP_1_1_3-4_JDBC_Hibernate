@@ -28,6 +28,13 @@ public class User {
         this.age = age;
     }
 
+    public User(Long id, String name, String lastName, Byte age) {
+        this.name = name;
+        this.lastName = lastName;
+        this.age = age;
+        this.id = id;
+    }
+
     public Long getId() {
         return id;
     }
@@ -58,5 +65,14 @@ public class User {
 
     public void setAge(Byte age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("User [id=").append(id).append(", name=").append(name)
+                .append(", lastName=").append(lastName).append(", age=")
+                .append(age).append("]");
+        return builder.toString();
     }
 }
